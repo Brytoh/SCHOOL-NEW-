@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Latest News | Bright Future College</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="index.html">
+
+🎓 Bright Future College
+
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="courses.html">Courses</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="news.html">News</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="gallery.html">Gallery</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link btn btn-warning text-dark ms-lg-3 px-3"
+href="apply.html">
+
+Apply Now
+
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="overlay">
+
+<div class="container text-center text-white">
+
+<h1>Latest News</h1>
+
+<p>
+
+Stay updated with the latest happenings at Bright Future College.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= NEWS ================= -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="row" id="newsContainer">
+
+<div class="text-center">
+
+<h4>Loading News...</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white py-4">
+
+<div class="container text-center">
+
+<h4>
+
+Bright Future College
+
+</h4>
+
+<p>
+
+Empowering Students for a Better Tomorrow
+
+</p>
+
+<p>
+
+© 2026 Bright Future College. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="js/api.js"></script>
+
+<script>
+
+async function loadNews(){
+
+    const news = await API.get("News");
+
+    const container = document.getElementById("newsContainer");
+
+    container.innerHTML = "";
+
+    if(news.length === 0){
+
+        container.innerHTML = `
+        <div class="text-center">
+            <h4>No news available.</h4>
+        </div>
+        `;
+
+        return;
+
+    }
+
+    news.forEach(item=>{
+
+        container.innerHTML += `
+
+        <div class="col-lg-4 col-md-6 mb-4">
+
+            <div class="card shadow h-100">
+
+                <img src="${item.IMAGE}"
+                     class="card-img-top"
+                     alt="${item.TITLE}"
+                     style="height:220px;object-fit:cover;">
+
+                <div class="card-body">
+
+                    <small class="text-muted">
+
+                        ${item.DATE}
+
+                    </small>
+
+                    <h4 class="mt-2">
+
+                        ${item.TITLE}
+
+                    </h4>
+
+                    <p>
+
+                        ${item.DESCRIPTION}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+}
+
+loadNews();
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
