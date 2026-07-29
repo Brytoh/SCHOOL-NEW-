@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Apply Online | Bright Future College</title>
@@ -14,9 +15,9 @@
 
 </head>
 
+
 <body>
 
-<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
 
@@ -28,57 +29,92 @@
 
 </a>
 
-<button class="navbar-toggler"
+
+<button
+
+class="navbar-toggler"
+
 type="button"
+
 data-bs-toggle="collapse"
+
 data-bs-target="#navbarNav">
 
 <span class="navbar-toggler-icon"></span>
 
 </button>
 
+
 <div class="collapse navbar-collapse" id="navbarNav">
+
 
 <ul class="navbar-nav ms-auto">
 
-<li class="nav-item">
-<a class="nav-link" href="index.html">Home</a>
-</li>
 
 <li class="nav-item">
-<a class="nav-link" href="about.html">About</a>
+<a class="nav-link" href="index.html">
+Home
+</a>
 </li>
 
-<li class="nav-item">
-<a class="nav-link" href="courses.html">Courses</a>
-</li>
 
 <li class="nav-item">
-<a class="nav-link" href="news.html">News</a>
+<a class="nav-link" href="about.html">
+About
+</a>
 </li>
 
-<li class="nav-item">
-<a class="nav-link" href="gallery.html">Gallery</a>
-</li>
 
 <li class="nav-item">
-<a class="nav-link" href="events.html">Events</a>
+<a class="nav-link" href="courses.html">
+Courses
+</a>
 </li>
 
-<li class="nav-item">
-<a class="nav-link" href="contact.html">Contact</a>
-</li>
 
 <li class="nav-item">
+<a class="nav-link" href="news.html">
+News
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="gallery.html">
+Gallery
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="events.html">
+Events
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">
+Contact
+</a>
+</li>
+
+
+<li class="nav-item">
+
 <a class="nav-link active btn btn-warning text-dark ms-lg-3 px-3"
+
 href="apply.html">
 
 Apply Now
 
 </a>
+
 </li>
 
+
 </ul>
+
 
 </div>
 
@@ -86,7 +122,8 @@ Apply Now
 
 </nav>
 
-<!-- HERO -->
+
+
 
 <section class="hero">
 
@@ -100,11 +137,13 @@ Online Application
 
 </h1>
 
+
 <p>
 
 Complete the form below to apply for admission.
 
 </p>
+
 
 </div>
 
@@ -112,19 +151,26 @@ Complete the form below to apply for admission.
 
 </section>
 
-<!-- FORM -->
+
+
 
 <section class="py-5">
 
+
 <div class="container">
+
 
 <div class="row justify-content-center">
 
+
 <div class="col-lg-8">
+
 
 <div class="card shadow">
 
+
 <div class="card-body p-4">
+
 
 <h2 class="text-center mb-4">
 
@@ -132,135 +178,291 @@ Student Application Form
 
 </h2>
 
+
 <form id="applicationForm">
+
 
 <div class="row">
 
+
 <div class="col-md-6 mb-3">
 
-<label>Full Name</label>
+
+<label class="form-label">
+
+Full Name
+
+</label>
+
 
 <input
+
 type="text"
+
+id="fullname"
+
 name="fullname"
+
 class="form-control"
+
 required>
+
 
 </div>
 
+
 <div class="col-md-6 mb-3">
 
-<label>Email</label>
+
+<label class="form-label">
+
+Email
+
+</label>
+
 
 <input
+
 type="email"
+
+id="email"
+
 name="email"
+
 class="form-control"
+
 required>
 
-</div>
 
+</div>
 <div class="col-md-6 mb-3">
 
-<label>Phone Number</label>
+<label class="form-label">
+
+Phone Number
+
+</label>
+
 
 <input
+
 type="text"
+
+id="phone"
+
 name="phone"
+
 class="form-control"
+
 required>
+
 
 </div>
 
+
+
+
 <div class="col-md-6 mb-3">
 
-<label>Gender</label>
+<label class="form-label">
+
+Gender
+
+</label>
+
 
 <select
+
+id="gender"
+
 name="gender"
+
 class="form-select"
+
 required>
 
-<option value="">Choose...</option>
 
-<option>Male</option>
+<option value="">
 
-<option>Female</option>
+Select Gender
+
+</option>
+
+
+<option value="Male">
+
+Male
+
+</option>
+
+
+<option value="Female">
+
+Female
+
+</option>
+
 
 </select>
 
+
 </div>
+
+
+
+
 
 <div class="col-md-6 mb-3">
 
-<label>Course Applying For</label>
+
+<label class="form-label">
+
+Course Applying For
+
+</label>
+
 
 <select
+
+id="course"
+
 name="course"
-id="courseSelect"
+
 class="form-select"
+
 required>
 
-<option>
+
+<option value="">
 
 Loading Courses...
 
 </option>
 
+
 </select>
 
+
 </div>
+
+
+
+
 
 <div class="col-md-6 mb-3">
 
-<label>Highest Education</label>
+
+<label class="form-label">
+
+Highest Education
+
+</label>
+
 
 <select
+
+id="education"
+
 name="education"
+
 class="form-select">
 
-<option>KCSE</option>
 
-<option>Certificate</option>
+<option value="KCSE">
 
-<option>Diploma</option>
+KCSE
 
-<option>Degree</option>
+</option>
+
+
+<option value="Certificate">
+
+Certificate
+
+</option>
+
+
+<option value="Diploma">
+
+Diploma
+
+</option>
+
+
+<option value="Degree">
+
+Degree
+
+</option>
+
 
 </select>
 
+
 </div>
+
+
+
+
 
 <div class="col-12 mb-3">
 
-<label>Additional Information</label>
+
+<label class="form-label">
+
+Additional Information
+
+</label>
+
 
 <textarea
+
+id="message"
+
 name="message"
+
 rows="5"
-class="form-control"></textarea>
+
+class="form-control"
+
+placeholder="Any additional information...">
+
+</textarea>
+
 
 </div>
 
-</div>
 
-<div class="text-center">
+
+
+
+<div class="col-12 text-center">
+
 
 <button
+
 type="submit"
+
 class="btn btn-primary btn-lg">
+
 
 Submit Application
 
+
 </button>
 
+
 </div>
+
+
+</div>
+
 
 </form>
 
-<div
-id="result"
-class="mt-4 text-center">
+
+<div id="result" class="mt-4 text-center"></div>
+
 
 </div>
 
@@ -272,15 +474,18 @@ class="mt-4 text-center">
 
 </div>
 
-</div>
 
 </section>
 
-<!-- FOOTER -->
+
+
+
 
 <footer class="bg-dark text-white py-4">
 
+
 <div class="container text-center">
+
 
 <h4>
 
@@ -288,55 +493,188 @@ Bright Future College
 
 </h4>
 
+
 <p>
 
 Empowering Students for a Better Tomorrow
 
 </p>
 
+
 <p>
 
-© 2026 Bright Future College
+&copy; 2026 Bright Future College. All Rights Reserved.
 
 </p>
 
+
 </div>
+
 
 </footer>
 
+
+
+
+
 <script src="js/api.js"></script>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
+
+
 <script>
+
 
 async function loadCourses(){
 
-const courses = await API.get("Courses");
 
-const select = document.getElementById("courseSelect");
+    try{
 
-select.innerHTML="";
 
-courses.forEach(course=>{
+        const courses = await API.get("Courses");
 
-select.innerHTML += `
 
-<option>
+        const select = document.getElementById("course");
 
-${course.COURSES}
 
-</option>
+        select.innerHTML =
 
-`;
+        '<option value="">Select Course</option>';
 
-});
+
+
+        courses.forEach(course=>{
+
+
+            select.innerHTML += `
+
+
+            <option value="${course.COURSES}">
+
+            ${course.COURSES}
+
+            </option>
+
+
+            `;
+
+
+        });
+
+
+    }
+
+
+    catch(error){
+
+
+        console.log(error);
+
+
+    }
+
 
 }
 
+
+
 loadCourses();
+const form = document.getElementById("applicationForm");
+
+
+form.addEventListener("submit", async function(e){
+
+
+    e.preventDefault();
+
+
+
+    const formData = new FormData(form);
+
+
+
+    document.getElementById("result").innerHTML = `
+
+    <div class="alert alert-info">
+
+    Submitting application...
+
+    </div>
+
+    `;
+
+
+
+    try{
+
+
+        await fetch(
+
+        "https://script.google.com/macros/s/AKfycbx_dcGpkyENUGdxTsxE4wyFyuusTcgTWrdkkRV4ZRJ5KFpkKKTFMjUaPjzMRBoEVBmG/exec",
+
+        {
+
+            method:"POST",
+
+            body:formData
+
+        });
+
+
+
+        document.getElementById("result").innerHTML = `
+
+
+        <div class="alert alert-success">
+
+        Application submitted successfully. We will contact you soon.
+
+        </div>
+
+
+        `;
+
+
+
+        form.reset();
+
+
+        loadCourses();
+
+
+
+    }
+
+
+    catch(error){
+
+
+        document.getElementById("result").innerHTML = `
+
+
+        <div class="alert alert-danger">
+
+        Failed to submit application. Please try again.
+
+        </div>
+
+
+        `;
+
+
+        console.log(error);
+
+
+    }
+
+
+});
+
 
 </script>
+
 
 </body>
 

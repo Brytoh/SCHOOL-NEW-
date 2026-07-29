@@ -1,0 +1,23 @@
+body{
+
+    background: linear-gradient(
+        135deg,
+        #0d6efd,
+        #ffffff
+    );
+
+}
+
+
+.card{
+
+    border-radius:15px;
+
+}
+
+
+h2{
+
+    font-weight:bold;
+
+}
