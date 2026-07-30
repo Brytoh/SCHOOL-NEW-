@@ -4,7 +4,7 @@
 
 const API = {
 
-    BASE_URL: "https://script.google.com/macros/s/AKfycbyx0Jo5x2DEkaUajDL79sOSA51mrTp_0jMOw0xVnNbu93I6v-1ZavCxtKXV2rWZl37z/exec",
+    BASE_URL: "https://script.google.com/macros/s/AKfycbx_dcGpkyENUGdxTsxE4wyFyuusTcgTWrdkkRV4ZRJ5KFpkKKTFMjUaPjzMRBoEVBmG/exec",
 
     async get(sheet) {
 
@@ -13,12 +13,12 @@ const API = {
             const response = await fetch(`${this.BASE_URL}?sheet=${sheet}`);
 
             if (!response.ok) {
+
                 throw new Error(`HTTP Error: ${response.status}`);
+
             }
 
-            const data = await response.json();
-
-            return data;
+            return await response.json();
 
         }
 
