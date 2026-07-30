@@ -89,6 +89,13 @@ async function loadCourses(){
                         ${course.DURATION}
 
                     </p>
+                    <p>
+
+                        <strong>Level:</strong>
+
+                        ${course.LEVEL}
+
+                    </p>
 
                 </div>
 
